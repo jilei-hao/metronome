@@ -1,0 +1,20 @@
+# Machine state and secrets must never enter this repo.
+# If a legitimate authored file ever matches one of these globs, rename the
+# file — do not force-add.
+
+# Claude Code local/machine config
+settings.local.json
+.claude.json
+.credentials.json
+
+# Anything that smells like a secret
+*token*
+*key*
+*credential*
+*secret*
+*.pem
+.env
+.env.*
+
+# OS noise
+.DS_Store
