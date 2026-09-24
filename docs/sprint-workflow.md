@@ -13,8 +13,16 @@ in `projects/<sprint>/` as three files with fixed names and distinct lifetimes:
 the journal: what was attempted, what landed (commit hashes), what broke,
 decisions and their reasons. `NEXT_SESSION_PROMPT.md` is the ignition key: the
 exact prompt the next session starts from, written for a reader with zero
-memory — current state in a paragraph, the single next goal, files to read
-first, known traps.
+memory. It holds the current state in a paragraph, the open items, the files to
+read first, and known traps.
+
+**The next-session prompt lists the open work but doesn't pick from it; the
+user chooses each session's goal.** The agent writing a handoff knows the least
+about what will matter next time. Priorities shift between sessions — a review,
+a planning meeting, other projects — and a goal written into the prompt tends
+to get executed rather than questioned. The prompt groups the open items as a
+reminder, notes where one item depends on another, and records a next goal
+only if the user named it.
 
 This is data, not instructions: it lives in the project, is committed with the
 project, and is *referenced* from memory files, never inlined (see
@@ -23,8 +31,11 @@ conventions.md).
 ## Start ritual
 
 1. Read `NEXT_SESSION_PROMPT.md` — it is the session's brief.
-2. Skim `SPRINT_PLAN.md` for where this session's goal sits in the sprint.
-3. Only then touch code.
+2. Unless the user has already said, ask which open item this session is for.
+   Show the grouped list; don't pick one yourself.
+3. Skim `SPRINT_PLAN.md` for where that item sits in the sprint, and flag any
+   unfinished dependency before starting.
+4. Only then touch code.
 
 ## End ritual
 

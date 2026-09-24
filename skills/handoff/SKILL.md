@@ -16,8 +16,15 @@ sprint directory yet, say so and stop — don't invent one mid-handoff.
    why. Append only; never edit earlier entries.
 2. **Rewrite `NEXT_SESSION_PROMPT.md`** — replace it wholesale with the prompt
    the next session should start from: current state in one paragraph, the
-   single next goal, files to read first, known traps. Write for a reader with
+   open items, files to read first, and known traps. Write for a reader with
    zero memory of this session.
+   - **Don't choose the next goal. The user picks each session's goal.** List
+     the open items grouped by area, as a reminder rather than a priority
+     order, and tell the next session to ask which one to work on before
+     touching code.
+   - If an open item depends on unfinished work, say so next to it.
+   - If the user already named the next goal during this session, record it
+     as their choice.
 3. **Tick `SPRINT_PLAN.md`** — mark finished items done. Don't reword the plan
    or add scope; that's a planning act, not a handoff act.
 4. **Checkpoint commit** — if tests exist, run them and record the result in
