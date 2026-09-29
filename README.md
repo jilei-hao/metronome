@@ -35,6 +35,7 @@ Sprint rituals: [docs/sprint-workflow.md](docs/sprint-workflow.md).
 CLAUDE.md              global working contract (lean — see conventions.md)
 settings.json          user-level settings; safe values only, no secrets
 skills/handoff/        /handoff — end-of-session ritual
+skills/explain/        /explain — plain-language deep dive on one topic
 agents/code-reviewer.md  adversarial, independent review subagent
 rules/                 path-scoped rules (template + README inside)
 hooks/                 enforcement scripts; shipped DISABLED (see hooks/README.md)
