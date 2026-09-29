@@ -16,6 +16,7 @@ Pick the mechanism by *when it must fire* and *whether it must be guaranteed*:
 | Mechanism | Fires | Guarantee | Use for |
 |---|---|---|---|
 | `CLAUDE.md` | every session | advisory | brief, universal, always-true facts |
+| `output-styles/<name>.md` | every reply, once selected | advisory | how replies read: voice, length, format |
 | `skills/<name>/SKILL.md` | on `/name` | advisory | deliberate procedures (rituals, recipes) |
 | `rules/*.md` + `paths:` | when touching matching files | advisory | one-subsystem guidance |
 | `hooks/` + settings.json | at a lifecycle event | **deterministic** | gates that must not be skippable |
