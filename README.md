@@ -53,14 +53,23 @@ install.sh             symlinks the above into ~/.claude/, with backup
   `skills/`, `agents/`, `rules/`, `hooks/`. Everything else under `~/.claude/`
   (sessions, history, plugins, …) is left untouched.
 - Anything it would replace is first moved to `~/.claude-backup-<timestamp>/`.
-  It never deletes, never overwrites in place.
+  It never deletes, never overwrites in place. Backups are not merged: it warns
+  when a backup differs from the repo copy, since the repo version is what's live.
 - Idempotent: already-correct links are skipped; re-run any time.
 
 **settings.json caveat:** Claude Code itself writes to `~/.claude/settings.json`
 (e.g. "don't ask again" permission grants, `/config` changes). Through the
 symlink those writes land in this repo — treat them as diffs to review and
 commit or revert. If an update ever replaces the file instead of writing
-through the link (breaking the symlink), re-run `install.sh`.
+through the link (breaking the symlink), the real file now holds the newest
+settings. Copy it into the repo **before** re-linking. Otherwise `install.sh`
+moves it to a backup and puts the older repo copy back in use:
+
+```sh
+cp ~/.claude/settings.json ./settings.json   # keep the newer settings
+git diff settings.json                       # review, then commit or revert
+./install.sh                                 # re-link
+```
 
 ## Safety
 
