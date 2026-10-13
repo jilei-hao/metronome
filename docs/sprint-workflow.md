@@ -43,6 +43,11 @@ Run `/handoff`. It appends the log entry, rewrites the next-session prompt,
 ticks plan checkboxes, and makes a checkpoint commit — in that order, and
 starts no new work. The ritual is a skill so it's executed, not remembered.
 
+When the sprint's goal is finished, run `/close-sprint` instead: ledger row,
+elevate what a future session would act on (docs/memory/tools), remove every
+pointer into the sprint directory, tag, archive the directory. A handoff keeps a
+sprint alive; a close ends it.
+
 ## Test-as-ratchet
 
 Tests only ratchet forward:

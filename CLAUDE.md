@@ -26,5 +26,9 @@
 - Sprint state (`SPRINT_PLAN.md`, `PROGRESS_LOG.md`, `NEXT_SESSION_PROMPT.md`)
   lives in the project's `projects/<sprint>/` directory. Read it there; never
   copy its contents into this file.
-- The full workflow rationale is in `~/metronome/docs/` (conventions.md,
+- The sprint lifecycle is two skills: `/handoff` (end of a working session,
+  keeps the sprint alive) and `/close-sprint` (a finished sprint: ledger row,
+  elevate, repoint, archive). A project's `projects/README.md` holds the
+  rule and `projects/LEDGER.md` the history.
+- The full workflow rationale is in `~/dev/metronome/docs/` (conventions.md,
   sprint-workflow.md) — consult it, don't inline it.

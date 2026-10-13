@@ -33,3 +33,7 @@ sprint directory yet, say so and stop — don't invent one mid-handoff.
    `checkpoint: <one-line session summary>`.
 
 Never start new work from inside a handoff.
+
+If the sprint's goal is finished, run `/close-sprint` instead: it writes the
+ledger row, elevates the findings, removes every pointer into the directory and
+archives it. A handoff keeps a sprint alive; a close ends it.
