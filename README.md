@@ -36,6 +36,7 @@ CLAUDE.md              global working contract (lean — see conventions.md)
 settings.json          user-level settings; safe values only, no secrets
 skills/handoff/        /handoff — end-of-session ritual
 skills/explain/        /explain — plain-language deep dive on one topic
+skills/list-projects/  /list-projects — table of the folders in a repo's projects/
 agents/code-reviewer.md  adversarial, independent review subagent
 rules/                 path-scoped rules (template + README inside)
 hooks/                 enforcement scripts; shipped DISABLED (see hooks/README.md)
